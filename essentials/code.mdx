@@ -33,3 +33,112 @@ class HelloWorld {
 }
 ```
 ````
+
+## More language examples
+
+Mintlify supports syntax highlighting for dozens of languages. Here are a few common ones:
+
+```python hello.py
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+print(greet("World"))
+```
+
+```javascript hello.js
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("World"));
+```
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+## CodeGroup
+
+Use the `CodeGroup` component to display multiple code samples in a tabbed view. This is useful for showing the same example in different languages.
+
+<CodeGroup>
+
+```python Python
+def add(a, b):
+    return a + b
+
+result = add(2, 3)
+print(result)  # 5
+```
+
+```javascript JavaScript
+function add(a, b) {
+  return a + b;
+}
+
+const result = add(2, 3);
+console.log(result); // 5
+```
+
+```go Go
+package main
+
+import "fmt"
+
+func add(a, b int) int {
+    return a + b
+}
+
+func main() {
+    fmt.Println(add(2, 3)) // 5
+}
+```
+
+</CodeGroup>
+
+````md
+<CodeGroup>
+
+```python Python
+def add(a, b):
+    return a + b
+```
+
+```javascript JavaScript
+function add(a, b) {
+  return a + b;
+}
+```
+
+</CodeGroup>
+````
+
+## Line highlighting
+
+Highlight specific lines in a code block by adding a curly-brace range after the language identifier.
+
+```js {1,3-5}
+const greeting = "Hello, World!";
+
+function sayHello() {
+  console.log(greeting);
+}
+
+sayHello();
+```
+
+````md
+```js {1,3-5}
+const greeting = "Hello, World!";
+
+function sayHello() {
+  console.log(greeting);
+}
+
+sayHello();
+```
+````
