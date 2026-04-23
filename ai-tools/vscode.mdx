@@ -22,15 +22,18 @@ Set up VS Code with GitHub Copilot to help you write and maintain your Mintlify 
   ```
 </Step>
 
-<Step title="Install the Mintlify skill">
-  In the integrated terminal, run:
+<Step title="Install the Mintlify skill via CI/CD">
+  Create a `.github/copilot-setup-steps.yml` file in your repository to automatically
+  install the Mintlify skill whenever GitHub Copilot sets up the environment:
 
-  ```bash
-  npx skills add https://mintlify.com/docs
+  ```yaml
+  steps:
+    - name: Install Mintlify skill
+      run: npx skills add https://mintlify.com/docs
   ```
 
   This gives GitHub Copilot Mintlify's component reference, writing standards,
-  and workflow guidance.
+  and workflow guidance without requiring a manual install each time.
 </Step>
 
 <Step title="Customize project instructions">
